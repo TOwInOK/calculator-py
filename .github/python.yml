@@ -1,0 +1,29 @@
+name: Python tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12.*'
+
+    - name: Install Poetry
+      run: curl -sSL https: //install.python-poetry.org | python3 -
+
+    - name: Install dependencies
+      run: poetry install
+
+    - name: Run divide.py
+      run: poetry run python -m unittest tests.divide
+    - name: Run calculator.py
+      run: poetry run python -m unittest tests.calculator
+    - name: Run example
+      run: poetry run python -m example.main
