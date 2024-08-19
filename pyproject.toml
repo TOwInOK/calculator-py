@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "learn"
-version = "0.1.0"
-description = ""
-authors = ["TOwInOK"]
+name = "silly-calculator"
+version = "1.0.0"
+description = "Calculator build on numpy with rust way"
+authors = ["TOwInOK <60252419+TOwInOK@users.noreply.github.com>"]
 readme = "README.md"
 package-mode = false
 
